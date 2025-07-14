@@ -6,9 +6,8 @@ part of 'current_conditions.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CurrentConditionsImpl _$$CurrentConditionsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CurrentConditionsImpl(
+_CurrentConditions _$CurrentConditionsFromJson(Map<String, dynamic> json) =>
+    _CurrentConditions(
       currentTime: DateTime.parse(json['currentTime'] as String),
       timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>),
       isDaytime: json['isDaytime'] as bool,
@@ -36,8 +35,7 @@ _$CurrentConditionsImpl _$$CurrentConditionsImplFromJson(
           json['currentConditionsHistory'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CurrentConditionsImplToJson(
-        _$CurrentConditionsImpl instance) =>
+Map<String, dynamic> _$CurrentConditionsToJson(_CurrentConditions instance) =>
     <String, dynamic>{
       'currentTime': instance.currentTime.toIso8601String(),
       'timeZone': instance.timeZone,
@@ -59,9 +57,9 @@ Map<String, dynamic> _$$CurrentConditionsImplToJson(
       'currentConditionsHistory': instance.currentConditionsHistory,
     };
 
-_$CurrentConditionsHistoryImpl _$$CurrentConditionsHistoryImplFromJson(
+_CurrentConditionsHistory _$CurrentConditionsHistoryFromJson(
         Map<String, dynamic> json) =>
-    _$CurrentConditionsHistoryImpl(
+    _CurrentConditionsHistory(
       temperatureChange: TemperatureChange.fromJson(
           json['temperatureChange'] as Map<String, dynamic>),
       maxTemperature: MaxTemperature.fromJson(
@@ -71,8 +69,8 @@ _$CurrentConditionsHistoryImpl _$$CurrentConditionsHistoryImplFromJson(
       qpf: Qpf.fromJson(json['qpf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CurrentConditionsHistoryImplToJson(
-        _$CurrentConditionsHistoryImpl instance) =>
+Map<String, dynamic> _$CurrentConditionsHistoryToJson(
+        _CurrentConditionsHistory instance) =>
     <String, dynamic>{
       'temperatureChange': instance.temperatureChange,
       'maxTemperature': instance.maxTemperature,
@@ -80,15 +78,13 @@ Map<String, dynamic> _$$CurrentConditionsHistoryImplToJson(
       'qpf': instance.qpf,
     };
 
-_$TemperatureChangeImpl _$$TemperatureChangeImplFromJson(
-        Map<String, dynamic> json) =>
-    _$TemperatureChangeImpl(
+_TemperatureChange _$TemperatureChangeFromJson(Map<String, dynamic> json) =>
+    _TemperatureChange(
       degrees: (json['degrees'] as num).toDouble(),
       unit: json['unit'] as String,
     );
 
-Map<String, dynamic> _$$TemperatureChangeImplToJson(
-        _$TemperatureChangeImpl instance) =>
+Map<String, dynamic> _$TemperatureChangeToJson(_TemperatureChange instance) =>
     <String, dynamic>{
       'degrees': instance.degrees,
       'unit': instance.unit,

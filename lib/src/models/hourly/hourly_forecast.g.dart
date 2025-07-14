@@ -6,8 +6,8 @@ part of 'hourly_forecast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HourlyForecastImpl _$$HourlyForecastImplFromJson(Map<String, dynamic> json) =>
-    _$HourlyForecastImpl(
+_HourlyForecast _$HourlyForecastFromJson(Map<String, dynamic> json) =>
+    _HourlyForecast(
       forecastHours: (json['forecastHours'] as List<dynamic>)
           .map((e) => ForecastHour.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,16 +15,15 @@ _$HourlyForecastImpl _$$HourlyForecastImplFromJson(Map<String, dynamic> json) =>
       nextPageToken: json['nextPageToken'] as String?,
     );
 
-Map<String, dynamic> _$$HourlyForecastImplToJson(
-        _$HourlyForecastImpl instance) =>
+Map<String, dynamic> _$HourlyForecastToJson(_HourlyForecast instance) =>
     <String, dynamic>{
       'forecastHours': instance.forecastHours,
       'timeZone': instance.timeZone,
       'nextPageToken': instance.nextPageToken,
     };
 
-_$ForecastHourImpl _$$ForecastHourImplFromJson(Map<String, dynamic> json) =>
-    _$ForecastHourImpl(
+_ForecastHour _$ForecastHourFromJson(Map<String, dynamic> json) =>
+    _ForecastHour(
       interval: Interval.fromJson(json['interval'] as Map<String, dynamic>),
       displayDateTime: DisplayDateTime.fromJson(
           json['displayDateTime'] as Map<String, dynamic>),
@@ -55,7 +54,7 @@ _$ForecastHourImpl _$$ForecastHourImplFromJson(Map<String, dynamic> json) =>
           IceThickness.fromJson(json['iceThickness'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ForecastHourImplToJson(_$ForecastHourImpl instance) =>
+Map<String, dynamic> _$ForecastHourToJson(_ForecastHour instance) =>
     <String, dynamic>{
       'interval': instance.interval,
       'displayDateTime': instance.displayDateTime,

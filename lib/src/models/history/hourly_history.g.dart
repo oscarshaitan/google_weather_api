@@ -6,8 +6,8 @@ part of 'hourly_history.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HourlyHistoryImpl _$$HourlyHistoryImplFromJson(Map<String, dynamic> json) =>
-    _$HourlyHistoryImpl(
+_HourlyHistory _$HourlyHistoryFromJson(Map<String, dynamic> json) =>
+    _HourlyHistory(
       historyHours: (json['historyHours'] as List<dynamic>)
           .map((e) => HistoryHour.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,15 +15,14 @@ _$HourlyHistoryImpl _$$HourlyHistoryImplFromJson(Map<String, dynamic> json) =>
       nextPageToken: json['nextPageToken'] as String?,
     );
 
-Map<String, dynamic> _$$HourlyHistoryImplToJson(_$HourlyHistoryImpl instance) =>
+Map<String, dynamic> _$HourlyHistoryToJson(_HourlyHistory instance) =>
     <String, dynamic>{
       'historyHours': instance.historyHours,
       'timeZone': instance.timeZone,
       'nextPageToken': instance.nextPageToken,
     };
 
-_$HistoryHourImpl _$$HistoryHourImplFromJson(Map<String, dynamic> json) =>
-    _$HistoryHourImpl(
+_HistoryHour _$HistoryHourFromJson(Map<String, dynamic> json) => _HistoryHour(
       interval: Interval.fromJson(json['interval'] as Map<String, dynamic>),
       displayDateTime: DisplayDateTime.fromJson(
           json['displayDateTime'] as Map<String, dynamic>),
@@ -54,7 +53,7 @@ _$HistoryHourImpl _$$HistoryHourImplFromJson(Map<String, dynamic> json) =>
           IceThickness.fromJson(json['iceThickness'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$HistoryHourImplToJson(_$HistoryHourImpl instance) =>
+Map<String, dynamic> _$HistoryHourToJson(_HistoryHour instance) =>
     <String, dynamic>{
       'interval': instance.interval,
       'displayDateTime': instance.displayDateTime,

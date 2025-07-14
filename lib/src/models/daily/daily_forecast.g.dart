@@ -6,8 +6,8 @@ part of 'daily_forecast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DailyForecastImpl _$$DailyForecastImplFromJson(Map<String, dynamic> json) =>
-    _$DailyForecastImpl(
+_DailyForecast _$DailyForecastFromJson(Map<String, dynamic> json) =>
+    _DailyForecast(
       forecastDays: (json['forecastDays'] as List<dynamic>)
           .map((e) => ForecastDay.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,15 +15,14 @@ _$DailyForecastImpl _$$DailyForecastImplFromJson(Map<String, dynamic> json) =>
       nextPageToken: json['nextPageToken'] as String?,
     );
 
-Map<String, dynamic> _$$DailyForecastImplToJson(_$DailyForecastImpl instance) =>
+Map<String, dynamic> _$DailyForecastToJson(_DailyForecast instance) =>
     <String, dynamic>{
       'forecastDays': instance.forecastDays,
       'timeZone': instance.timeZone,
       'nextPageToken': instance.nextPageToken,
     };
 
-_$ForecastDayImpl _$$ForecastDayImplFromJson(Map<String, dynamic> json) =>
-    _$ForecastDayImpl(
+_ForecastDay _$ForecastDayFromJson(Map<String, dynamic> json) => _ForecastDay(
       interval: Interval.fromJson(json['interval'] as Map<String, dynamic>),
       displayDate:
           DisplayDate.fromJson(json['displayDate'] as Map<String, dynamic>),
@@ -48,7 +47,7 @@ _$ForecastDayImpl _$$ForecastDayImplFromJson(Map<String, dynamic> json) =>
           IceThickness.fromJson(json['iceThickness'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ForecastDayImplToJson(_$ForecastDayImpl instance) =>
+Map<String, dynamic> _$ForecastDayToJson(_ForecastDay instance) =>
     <String, dynamic>{
       'interval': instance.interval,
       'displayDate': instance.displayDate,
@@ -64,23 +63,21 @@ Map<String, dynamic> _$$ForecastDayImplToJson(_$ForecastDayImpl instance) =>
       'iceThickness': instance.iceThickness,
     };
 
-_$DisplayDateImpl _$$DisplayDateImplFromJson(Map<String, dynamic> json) =>
-    _$DisplayDateImpl(
+_DisplayDate _$DisplayDateFromJson(Map<String, dynamic> json) => _DisplayDate(
       year: (json['year'] as num).toInt(),
       month: (json['month'] as num).toInt(),
       day: (json['day'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$DisplayDateImplToJson(_$DisplayDateImpl instance) =>
+Map<String, dynamic> _$DisplayDateToJson(_DisplayDate instance) =>
     <String, dynamic>{
       'year': instance.year,
       'month': instance.month,
       'day': instance.day,
     };
 
-_$DaytimeForecastImpl _$$DaytimeForecastImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DaytimeForecastImpl(
+_DaytimeForecast _$DaytimeForecastFromJson(Map<String, dynamic> json) =>
+    _DaytimeForecast(
       interval: Interval.fromJson(json['interval'] as Map<String, dynamic>),
       weatherCondition: WeatherCondition.fromJson(
           json['weatherCondition'] as Map<String, dynamic>),
@@ -106,8 +103,7 @@ _$DaytimeForecastImpl _$$DaytimeForecastImplFromJson(
           : Visibility.fromJson(json['visibility'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$DaytimeForecastImplToJson(
-        _$DaytimeForecastImpl instance) =>
+Map<String, dynamic> _$DaytimeForecastToJson(_DaytimeForecast instance) =>
     <String, dynamic>{
       'interval': instance.interval,
       'weatherCondition': instance.weatherCondition,
@@ -123,9 +119,8 @@ Map<String, dynamic> _$$DaytimeForecastImplToJson(
       'visibility': instance.visibility,
     };
 
-_$NighttimeForecastImpl _$$NighttimeForecastImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NighttimeForecastImpl(
+_NighttimeForecast _$NighttimeForecastFromJson(Map<String, dynamic> json) =>
+    _NighttimeForecast(
       interval: Interval.fromJson(json['interval'] as Map<String, dynamic>),
       weatherCondition: WeatherCondition.fromJson(
           json['weatherCondition'] as Map<String, dynamic>),
@@ -138,8 +133,7 @@ _$NighttimeForecastImpl _$$NighttimeForecastImplFromJson(
       cloudCover: (json['cloudCover'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$NighttimeForecastImplToJson(
-        _$NighttimeForecastImpl instance) =>
+Map<String, dynamic> _$NighttimeForecastToJson(_NighttimeForecast instance) =>
     <String, dynamic>{
       'interval': instance.interval,
       'weatherCondition': instance.weatherCondition,
@@ -151,48 +145,46 @@ Map<String, dynamic> _$$NighttimeForecastImplToJson(
       'cloudCover': instance.cloudCover,
     };
 
-_$FeelsLikeMaxTemperatureImpl _$$FeelsLikeMaxTemperatureImplFromJson(
+_FeelsLikeMaxTemperature _$FeelsLikeMaxTemperatureFromJson(
         Map<String, dynamic> json) =>
-    _$FeelsLikeMaxTemperatureImpl(
+    _FeelsLikeMaxTemperature(
       degrees: (json['degrees'] as num).toDouble(),
       unit: json['unit'] as String,
     );
 
-Map<String, dynamic> _$$FeelsLikeMaxTemperatureImplToJson(
-        _$FeelsLikeMaxTemperatureImpl instance) =>
+Map<String, dynamic> _$FeelsLikeMaxTemperatureToJson(
+        _FeelsLikeMaxTemperature instance) =>
     <String, dynamic>{
       'degrees': instance.degrees,
       'unit': instance.unit,
     };
 
-_$FeelsLikeMinTemperatureImpl _$$FeelsLikeMinTemperatureImplFromJson(
+_FeelsLikeMinTemperature _$FeelsLikeMinTemperatureFromJson(
         Map<String, dynamic> json) =>
-    _$FeelsLikeMinTemperatureImpl(
+    _FeelsLikeMinTemperature(
       degrees: (json['degrees'] as num).toDouble(),
       unit: json['unit'] as String,
     );
 
-Map<String, dynamic> _$$FeelsLikeMinTemperatureImplToJson(
-        _$FeelsLikeMinTemperatureImpl instance) =>
+Map<String, dynamic> _$FeelsLikeMinTemperatureToJson(
+        _FeelsLikeMinTemperature instance) =>
     <String, dynamic>{
       'degrees': instance.degrees,
       'unit': instance.unit,
     };
 
-_$SunEventsImpl _$$SunEventsImplFromJson(Map<String, dynamic> json) =>
-    _$SunEventsImpl(
+_SunEvents _$SunEventsFromJson(Map<String, dynamic> json) => _SunEvents(
       sunriseTime: DateTime.parse(json['sunriseTime'] as String),
       sunsetTime: DateTime.parse(json['sunsetTime'] as String),
     );
 
-Map<String, dynamic> _$$SunEventsImplToJson(_$SunEventsImpl instance) =>
+Map<String, dynamic> _$SunEventsToJson(_SunEvents instance) =>
     <String, dynamic>{
       'sunriseTime': instance.sunriseTime.toIso8601String(),
       'sunsetTime': instance.sunsetTime.toIso8601String(),
     };
 
-_$MoonEventsImpl _$$MoonEventsImplFromJson(Map<String, dynamic> json) =>
-    _$MoonEventsImpl(
+_MoonEvents _$MoonEventsFromJson(Map<String, dynamic> json) => _MoonEvents(
       moonPhase: json['moonPhase'] as String,
       moonriseTimes: (json['moonriseTimes'] as List<dynamic>)
           .map((e) => DateTime.parse(e as String))
@@ -202,7 +194,7 @@ _$MoonEventsImpl _$$MoonEventsImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$MoonEventsImplToJson(_$MoonEventsImpl instance) =>
+Map<String, dynamic> _$MoonEventsToJson(_MoonEvents instance) =>
     <String, dynamic>{
       'moonPhase': instance.moonPhase,
       'moonriseTimes':
@@ -211,27 +203,25 @@ Map<String, dynamic> _$$MoonEventsImplToJson(_$MoonEventsImpl instance) =>
           instance.moonsetTimes.map((e) => e.toIso8601String()).toList(),
     };
 
-_$MaxHeatIndexImpl _$$MaxHeatIndexImplFromJson(Map<String, dynamic> json) =>
-    _$MaxHeatIndexImpl(
+_MaxHeatIndex _$MaxHeatIndexFromJson(Map<String, dynamic> json) =>
+    _MaxHeatIndex(
       degrees: (json['degrees'] as num).toDouble(),
       unit: json['unit'] as String,
     );
 
-Map<String, dynamic> _$$MaxHeatIndexImplToJson(_$MaxHeatIndexImpl instance) =>
+Map<String, dynamic> _$MaxHeatIndexToJson(_MaxHeatIndex instance) =>
     <String, dynamic>{
       'degrees': instance.degrees,
       'unit': instance.unit,
     };
 
-_$SeaLevelPressureImpl _$$SeaLevelPressureImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SeaLevelPressureImpl(
+_SeaLevelPressure _$SeaLevelPressureFromJson(Map<String, dynamic> json) =>
+    _SeaLevelPressure(
       value: (json['value'] as num).toDouble(),
       unit: json['unit'] as String,
     );
 
-Map<String, dynamic> _$$SeaLevelPressureImplToJson(
-        _$SeaLevelPressureImpl instance) =>
+Map<String, dynamic> _$SeaLevelPressureToJson(_SeaLevelPressure instance) =>
     <String, dynamic>{
       'value': instance.value,
       'unit': instance.unit,
