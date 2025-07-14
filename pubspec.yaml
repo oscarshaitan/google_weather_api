@@ -1,6 +1,6 @@
 name: google_weather_flutter
-description: A Flutter plugin for the Google Weather API. This package provides a simple and easy-to-use interface for fetching current, hourly, and daily weather forecasts, as well as historical weather data.
-version: 0.1.0
+description: A comprehensive Flutter plugin for the Google Weather API. Easily fetch current conditions, hourly and daily forecasts, and historical weather data for your apps.
+version: 0.1.1
 homepage: https://github.com/oscarshaitan/google_weather_api
 
 environment:
