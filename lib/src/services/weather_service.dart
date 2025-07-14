@@ -7,15 +7,24 @@ import 'package:google_weather_flutter/src/models/history/hourly_history.dart';
 import 'package:google_weather_flutter/src/models/params/forecast_params.dart';
 import 'package:google_weather_flutter/src/models/params/history_params.dart';
 
+/// A service that provides weather information using the Google Weather API.
 class WeatherService {
   final Dio _dio;
   final String _apiKey;
 
+  /// Creates a new [WeatherService].
+  ///
+  /// [apiKey] is your Google Weather API key.
+  /// [dio] is an optional [Dio] instance to use for making requests.
   WeatherService({required String apiKey, Dio? dio})
       : _apiKey = apiKey,
         _dio = dio ??
             Dio(BaseOptions(baseUrl: 'https://weather.googleapis.com/v1/'));
 
+  /// Returns the current weather conditions for a given location.
+  ///
+  /// [lat] is the latitude of the location.
+  /// [lon] is the longitude of the location.
   Future<CurrentConditions> getCurrentConditions(double lat, double lon) async {
     final queryParameters = {
       'location.latitude': lat,
@@ -38,6 +47,9 @@ class WeatherService {
     }
   }
 
+  /// Returns the daily forecast for a given location.
+  ///
+  /// [params] is a [ForecastParams] object that contains the location and other parameters.
   Future<DailyForecast> getDailyForecast(ForecastParams params) async {
     try {
       final queryParameters = <String, dynamic>{
@@ -64,6 +76,9 @@ class WeatherService {
     }
   }
 
+  /// Returns the hourly forecast for a given location.
+  ///
+  /// [params] is a [ForecastParams] object that contains the location and other parameters.
   Future<HourlyForecast> getHourlyForecast(ForecastParams params) async {
     try {
       final queryParameters = <String, dynamic>{
@@ -87,6 +102,9 @@ class WeatherService {
     }
   }
 
+  /// Returns the hourly history for a given location.
+  ///
+  /// [params] is a [HistoryParams] object that contains the location and other parameters.
   Future<HourlyHistory> getHourlyHistory(HistoryParams params) async {
     try {
       final queryParameters = <String, dynamic>{
