@@ -1,11 +1,11 @@
 import 'dart:developer' as developer;
 import 'package:dio/dio.dart';
-import 'package:weather_plugin/src/models/current/current_conditions.dart';
-import 'package:weather_plugin/src/models/daily/daily_forecast.dart';
-import 'package:weather_plugin/src/models/hourly/hourly_forecast.dart';
-import 'package:weather_plugin/src/models/history/hourly_history.dart';
-import 'package:weather_plugin/src/models/params/forecast_params.dart';
-import 'package:weather_plugin/src/models/params/history_params.dart';
+import 'package:google_weather_flutter/src/models/current/current_conditions.dart';
+import 'package:google_weather_flutter/src/models/daily/daily_forecast.dart';
+import 'package:google_weather_flutter/src/models/hourly/hourly_forecast.dart';
+import 'package:google_weather_flutter/src/models/history/hourly_history.dart';
+import 'package:google_weather_flutter/src/models/params/forecast_params.dart';
+import 'package:google_weather_flutter/src/models/params/history_params.dart';
 
 class WeatherService {
   final Dio _dio;

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:weather_plugin/src/models/common/common_models.dart';
+import 'package:google_weather_flutter/src/models/common/common_models.dart';
 
 part 'current_conditions.freezed.dart';
 part 'current_conditions.g.dart';

@@ -1,5 +1,5 @@
-name: weather_plugin
-description: A Flutter plugin to fetch weather data from the Google Weather API.
+name: google_weather_flutter
+description: A Flutter plugin for the Google Weather API.
 version: 0.0.1
 homepage:
 

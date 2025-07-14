@@ -1,8 +1,8 @@
-# Weather Plugin for Flutter
+# Google Weather Flutter
 
 A Flutter plugin to fetch weather data from the [Google Weather API](https://developers.google.com/maps/documentation/weather).
 
-[![pub package](https://img.shields.io/pub/v/weather_plugin.svg)](https://pub.dev/packages/weather_plugin)
+[![pub package](https://img.shields.io/pub/v/google_weather_flutter.svg)](https://pub.dev/packages/google_weather_flutter)
 
 ## Features
 
@@ -24,7 +24,7 @@ A Flutter plugin to fetch weather data from the [Google Weather API](https://dev
 
     ```yaml
     dependencies:
-      weather_plugin: ^0.1.0 # Replace with the latest version
+      google_weather_flutter: ^0.1.0 # Replace with the latest version
     ```
 
 3.  **Install the package:**
@@ -38,7 +38,7 @@ A Flutter plugin to fetch weather data from the [Google Weather API](https://dev
 Import the package and create an instance of `WeatherService`:
 
 ```dart
-import 'package:weather_plugin/weather_plugin.dart';
+import 'package:google_weather_flutter/google_weather_flutter.dart';
 
 final weatherService = WeatherService('YOUR_API_KEY');
 ```

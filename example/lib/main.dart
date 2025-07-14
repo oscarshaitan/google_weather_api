@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_plugin/weather_plugin.dart';
+import 'package:weather_plugin/google_weather_flutter.dart';
 
 void main() {
   runApp(const MyApp());

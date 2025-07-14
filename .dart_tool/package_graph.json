@@ -1,10 +1,10 @@
 {
   "roots": [
-    "weather_plugin"
+    "google_weather_flutter"
   ],
   "packages": [
     {
-      "name": "weather_plugin",
+      "name": "google_weather_flutter",
       "version": "0.0.1",
       "dependencies": [
         "dio",
