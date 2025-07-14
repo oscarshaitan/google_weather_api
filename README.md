@@ -1,60 +1,120 @@
-# Weather Plugin
+# Weather Plugin for Flutter
 
-This plugin provides a simple way to fetch weather data for a given location.
+A Flutter plugin to fetch weather data from the [Google Weather API](https://developers.google.com/maps/documentation/weather).
 
-## For Publishing
+[![pub package](https://img.shields.io/pub/v/weather_plugin.svg)](https://pub.dev/packages/weather_plugin)
 
-This README.md file is intended for publishing the plugin to a package repository.
+## Features
+
+*   Get current weather conditions.
+*   Get hourly weather forecasts.
+*   Get daily weather forecasts.
+*   Get historical weather data.
 
 ## Installation
-This plugin utilizes the Google Weather API. To use this plugin, you will need to obtain an API key from the [Google Cloud Platform Console](https://console.cloud.google.com/).
 
-Please be aware of the [Google Weather API usage limits and costs](https://developers.google.com/maps/documentation/weather/usage-and-billing).
+1.  **Get an API Key:**
+    *   Go to the [Google Cloud Platform Console](https://console.cloud.google.com/).
+    *   Create a new project (or select an existing one).
+    *   Enable the "Weather API".
+    *   Create an API key.
+    *   **Important:** Secure your API key by following the [best practices](https://developers.google.com/maps/api-key-best-practices).
 
-Once you have your API key, you can add the plugin to your project.
+2.  **Add the dependency:**
 
+    ```yaml
+    dependencies:
+      weather_plugin: ^0.1.0 # Replace with the latest version
+    ```
 
+3.  **Install the package:**
 
-Add the following to your `pubspec.yaml` file:
-
-```
-yaml
-dependencies:
-  weather_plugin: ^0.1.0 # Replace with the actual version
-```
-Then run `flutter pub get`.
+    ```bash
+    flutter pub get
+    ```
 
 ## Usage
 
-Here's a simple example of how to use the plugin:
+Import the package and create an instance of `WeatherService`:
 
-```
-dart
+```dart
 import 'package:weather_plugin/weather_plugin.dart';
 
-void main() async {
-  final weatherService = WeatherService();
+final weatherService = WeatherService('YOUR_API_KEY');
+```
 
-  // Replace with the desired coordinates
-  final latitude = 37.7749;
-  final longitude = -122.4194;
+### Get Current Conditions
 
-  try {
-    final currentConditions = await weatherService.getCurrentConditions(latitude, longitude);
-    print('Current temperature: ${currentConditions.temperature} ${currentConditions.temperatureUnit}');
-    print('Weather description: ${currentConditions.weatherDescription}');
-
-    final hourlyForecast = await weatherService.getHourlyForecast(latitude, longitude);
-    print('Hourly forecast: ${hourlyForecast.forecast}');
-
-    final dailyForecast = await weatherService.getDailyForecast(latitude, longitude);
-    print('Daily forecast: ${dailyForecast.forecast}');
-
-  } catch (e) {
-    print('Error fetching weather data: $e');
-  }
+```dart
+try {
+  final currentConditions = await weatherService.getCurrentConditions(
+    latitude: 37.7749,
+    longitude: -122.4194,
+  );
+  print('Temperature: ${currentConditions.temperature.value} ${currentConditions.temperature.units}');
+  print('Condition: ${currentConditions.condition.text}');
+} catch (e) {
+  print('Error: $e');
 }
 ```
+
+### Get Hourly Forecast
+
+```dart
+try {
+  final hourlyForecast = await weatherService.getHourlyForecast(
+    latitude: 37.7749,
+    longitude: -122.4194,
+  );
+  for (final forecast in hourlyForecast) {
+    print('${forecast.time}: ${forecast.temperature.value}°${forecast.temperature.units}, ${forecast.condition.text}');
+  }
+} catch (e) {
+  print('Error: $e');
+}
+```
+
+### Get Daily Forecast
+
+```dart
+try {
+  final dailyForecast = await weatherService.getDailyForecast(
+    latitude: 37.7749,
+    longitude: -122.4194,
+  );
+  for (final forecast in dailyForecast) {
+    print('${forecast.date}: ${forecast.temperature.value}°${forecast.temperature.units}, ${forecast.condition.text}');
+  }
+} catch (e) {
+  print('Error: $e');
+}
+```
+
+### Get Historical Data
+
+```dart
+try {
+  final history = await weatherService.getHourlyHistory(
+    latitude: 37.7749,
+    longitude: -122.4194,
+    date: DateTime(2023, 10, 26),
+  );
+  for (final entry in history) {
+    print('${entry.time}: ${entry.temperature.value}°${entry.temperature.units}');
+  }
+} catch (e) {
+  print('Error: $e');
+}
+```
+
 ## Documentation
 
-For more detailed documentation, please visit: [https://example.com/weather_plugin/docs](https://example.com/weather_plugin/docs) (Placeholder)
+For more details on the available data and models, please refer to the [Google Weather API documentation](https://developers.google.com/maps/documentation/weather).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
