@@ -2,9 +2,9 @@ name: Flutter CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          lcov --remove coverage/lcov.info 'lib/src/models/*' -o coverage/lcov.info
+          lcov --remove coverage/lcov.info 'lib/src/models/*' 'lib/src/ui/*' -o coverage/lcov.info
           genhtml coverage/lcov.info --output-directory coverage/html
 
       - name: Upload coverage report
