@@ -236,7 +236,7 @@ extension TimeZonePatterns on TimeZone {
 /// @nodoc
 @JsonSerializable()
 class _TimeZone implements TimeZone {
-  const _TimeZone({required this.id});
+  _TimeZone({required this.id});
   factory _TimeZone.fromJson(Map<String, dynamic> json) =>
       _$TimeZoneFromJson(json);
 
@@ -572,7 +572,7 @@ extension WeatherConditionPatterns on WeatherCondition {
 /// @nodoc
 @JsonSerializable()
 class _WeatherCondition implements WeatherCondition {
-  const _WeatherCondition(
+  _WeatherCondition(
       {required this.iconBaseUri,
       required this.description,
       required this.type});
@@ -921,7 +921,7 @@ extension DescriptionPatterns on Description {
 /// @nodoc
 @JsonSerializable()
 class _Description implements Description {
-  const _Description({required this.text, required this.languageCode});
+  _Description({required this.text, required this.languageCode});
   factory _Description.fromJson(Map<String, dynamic> json) =>
       _$DescriptionFromJson(json);
 
@@ -1241,7 +1241,7 @@ extension TemperaturePatterns on Temperature {
 /// @nodoc
 @JsonSerializable()
 class _Temperature implements Temperature {
-  const _Temperature({required this.degrees, required this.unit});
+  _Temperature({required this.degrees, required this.unit});
   factory _Temperature.fromJson(Map<String, dynamic> json) =>
       _$TemperatureFromJson(json);
 
@@ -1562,7 +1562,7 @@ extension FeelsLikeTemperaturePatterns on FeelsLikeTemperature {
 /// @nodoc
 @JsonSerializable()
 class _FeelsLikeTemperature implements FeelsLikeTemperature {
-  const _FeelsLikeTemperature({required this.degrees, required this.unit});
+  _FeelsLikeTemperature({required this.degrees, required this.unit});
   factory _FeelsLikeTemperature.fromJson(Map<String, dynamic> json) =>
       _$FeelsLikeTemperatureFromJson(json);
 
@@ -1882,7 +1882,7 @@ extension DewPointPatterns on DewPoint {
 /// @nodoc
 @JsonSerializable()
 class _DewPoint implements DewPoint {
-  const _DewPoint({required this.degrees, required this.unit});
+  _DewPoint({required this.degrees, required this.unit});
   factory _DewPoint.fromJson(Map<String, dynamic> json) =>
       _$DewPointFromJson(json);
 
@@ -2199,7 +2199,7 @@ extension HeatIndexPatterns on HeatIndex {
 /// @nodoc
 @JsonSerializable()
 class _HeatIndex implements HeatIndex {
-  const _HeatIndex({required this.degrees, required this.unit});
+  _HeatIndex({required this.degrees, required this.unit});
   factory _HeatIndex.fromJson(Map<String, dynamic> json) =>
       _$HeatIndexFromJson(json);
 
@@ -2517,7 +2517,7 @@ extension WindChillPatterns on WindChill {
 /// @nodoc
 @JsonSerializable()
 class _WindChill implements WindChill {
-  const _WindChill({required this.degrees, required this.unit});
+  _WindChill({required this.degrees, required this.unit});
   factory _WindChill.fromJson(Map<String, dynamic> json) =>
       _$WindChillFromJson(json);
 
@@ -2862,7 +2862,7 @@ extension PrecipitationPatterns on Precipitation {
 /// @nodoc
 @JsonSerializable()
 class _Precipitation implements Precipitation {
-  const _Precipitation({required this.probability, required this.qpf});
+  _Precipitation({required this.probability, required this.qpf});
   factory _Precipitation.fromJson(Map<String, dynamic> json) =>
       _$PrecipitationFromJson(json);
 
@@ -3208,7 +3208,7 @@ extension ProbabilityPatterns on Probability {
 /// @nodoc
 @JsonSerializable()
 class _Probability implements Probability {
-  const _Probability({required this.percent, required this.type});
+  _Probability({required this.percent, required this.type});
   factory _Probability.fromJson(Map<String, dynamic> json) =>
       _$ProbabilityFromJson(json);
 
@@ -3526,7 +3526,7 @@ extension QpfPatterns on Qpf {
 /// @nodoc
 @JsonSerializable()
 class _Qpf implements Qpf {
-  const _Qpf({required this.quantity, required this.unit});
+  _Qpf({required this.quantity, required this.unit});
   factory _Qpf.fromJson(Map<String, dynamic> json) => _$QpfFromJson(json);
 
   /// The quantity of precipitation.
@@ -3835,7 +3835,7 @@ extension AirPressurePatterns on AirPressure {
 /// @nodoc
 @JsonSerializable()
 class _AirPressure implements AirPressure {
-  const _AirPressure({required this.meanSeaLevelMillibars});
+  _AirPressure({required this.meanSeaLevelMillibars});
   factory _AirPressure.fromJson(Map<String, dynamic> json) =>
       _$AirPressureFromJson(json);
 
@@ -4188,8 +4188,7 @@ extension WindPatterns on Wind {
 /// @nodoc
 @JsonSerializable()
 class _Wind implements Wind {
-  const _Wind(
-      {required this.direction, required this.speed, required this.gust});
+  _Wind({required this.direction, required this.speed, required this.gust});
   factory _Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
 
   /// The wind direction.
@@ -4553,7 +4552,7 @@ extension DirectionPatterns on Direction {
 /// @nodoc
 @JsonSerializable()
 class _Direction implements Direction {
-  const _Direction({required this.degrees, required this.cardinal});
+  _Direction({required this.degrees, required this.cardinal});
   factory _Direction.fromJson(Map<String, dynamic> json) =>
       _$DirectionFromJson(json);
 
@@ -4872,7 +4871,7 @@ extension SpeedPatterns on Speed {
 /// @nodoc
 @JsonSerializable()
 class _Speed implements Speed {
-  const _Speed({required this.value, required this.unit});
+  _Speed({required this.value, required this.unit});
   factory _Speed.fromJson(Map<String, dynamic> json) => _$SpeedFromJson(json);
 
   /// The wind speed value.
@@ -5187,7 +5186,7 @@ extension GustPatterns on Gust {
 /// @nodoc
 @JsonSerializable()
 class _Gust implements Gust {
-  const _Gust({required this.value, required this.unit});
+  _Gust({required this.value, required this.unit});
   factory _Gust.fromJson(Map<String, dynamic> json) => _$GustFromJson(json);
 
   /// The wind gust value.
@@ -5504,7 +5503,7 @@ extension VisibilityPatterns on Visibility {
 /// @nodoc
 @JsonSerializable()
 class _Visibility implements Visibility {
-  const _Visibility({required this.distance, required this.unit});
+  _Visibility({required this.distance, required this.unit});
   factory _Visibility.fromJson(Map<String, dynamic> json) =>
       _$VisibilityFromJson(json);
 
@@ -5824,7 +5823,7 @@ extension IntervalPatterns on Interval {
 /// @nodoc
 @JsonSerializable()
 class _Interval implements Interval {
-  const _Interval({required this.startTime, required this.endTime});
+  _Interval({required this.startTime, required this.endTime});
   factory _Interval.fromJson(Map<String, dynamic> json) =>
       _$IntervalFromJson(json);
 

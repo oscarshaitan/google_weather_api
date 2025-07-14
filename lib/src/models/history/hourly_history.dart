@@ -6,7 +6,7 @@ part 'hourly_history.g.dart';
 
 /// The hourly history.
 @freezed
-class HourlyHistory with _$HourlyHistory {
+abstract class HourlyHistory with _$HourlyHistory {
   /// Creates a new [HourlyHistory].
   const factory HourlyHistory({
     /// A list of hourly history records.
@@ -26,7 +26,7 @@ class HourlyHistory with _$HourlyHistory {
 
 /// The history for a single hour.
 @freezed
-class HistoryHour with _$HistoryHour {
+abstract class HistoryHour with _$HistoryHour {
   /// Creates a new [HistoryHour].
   const factory HistoryHour({
     /// The time interval that this history record is for.

@@ -1,0 +1,87 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_CurrentConditions _$CurrentConditionsFromJson(Map<String, dynamic> json) =>
+    _CurrentConditions(
+      currentTime: DateTime.parse(json['currentTime'] as String),
+      timeZone: TimeZone.fromJson(json['timeZone'] as Map<String, dynamic>),
+      isDaytime: json['isDaytime'] as bool,
+      weatherCondition: WeatherCondition.fromJson(
+          json['weatherCondition'] as Map<String, dynamic>),
+      temperature:
+          Temperature.fromJson(json['temperature'] as Map<String, dynamic>),
+      feelsLikeTemperature: FeelsLikeTemperature.fromJson(
+          json['feelsLikeTemperature'] as Map<String, dynamic>),
+      dewPoint: DewPoint.fromJson(json['dewPoint'] as Map<String, dynamic>),
+      heatIndex: HeatIndex.fromJson(json['heatIndex'] as Map<String, dynamic>),
+      windChill: WindChill.fromJson(json['windChill'] as Map<String, dynamic>),
+      relativeHumidity: (json['relativeHumidity'] as num).toInt(),
+      uvIndex: (json['uvIndex'] as num).toInt(),
+      precipitation:
+          Precipitation.fromJson(json['precipitation'] as Map<String, dynamic>),
+      thunderstormProbability: (json['thunderstormProbability'] as num).toInt(),
+      airPressure:
+          AirPressure.fromJson(json['airPressure'] as Map<String, dynamic>),
+      wind: Wind.fromJson(json['wind'] as Map<String, dynamic>),
+      visibility:
+          Visibility.fromJson(json['visibility'] as Map<String, dynamic>),
+      cloudCover: (json['cloudCover'] as num).toInt(),
+      currentConditionsHistory: CurrentConditionsHistory.fromJson(
+          json['currentConditionsHistory'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$CurrentConditionsToJson(_CurrentConditions instance) =>
+    <String, dynamic>{
+      'currentTime': instance.currentTime.toIso8601String(),
+      'timeZone': instance.timeZone,
+      'isDaytime': instance.isDaytime,
+      'weatherCondition': instance.weatherCondition,
+      'temperature': instance.temperature,
+      'feelsLikeTemperature': instance.feelsLikeTemperature,
+      'dewPoint': instance.dewPoint,
+      'heatIndex': instance.heatIndex,
+      'windChill': instance.windChill,
+      'relativeHumidity': instance.relativeHumidity,
+      'uvIndex': instance.uvIndex,
+      'precipitation': instance.precipitation,
+      'thunderstormProbability': instance.thunderstormProbability,
+      'airPressure': instance.airPressure,
+      'wind': instance.wind,
+      'visibility': instance.visibility,
+      'cloudCover': instance.cloudCover,
+      'currentConditionsHistory': instance.currentConditionsHistory,
+    };
+
+_CurrentConditionsHistory _$CurrentConditionsHistoryFromJson(
+        Map<String, dynamic> json) =>
+    _CurrentConditionsHistory(
+      temperatureChange: TemperatureChange.fromJson(
+          json['temperatureChange'] as Map<String, dynamic>),
+      maxTemperature: MaxTemperature.fromJson(
+          json['maxTemperature'] as Map<String, dynamic>),
+      minTemperature: MinTemperature.fromJson(
+          json['minTemperature'] as Map<String, dynamic>),
+      qpf: Qpf.fromJson(json['qpf'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$CurrentConditionsHistoryToJson(
+        _CurrentConditionsHistory instance) =>
+    <String, dynamic>{
+      'temperatureChange': instance.temperatureChange,
+      'maxTemperature': instance.maxTemperature,
+      'minTemperature': instance.minTemperature,
+      'qpf': instance.qpf,
+    };
+
+_TemperatureChange _$TemperatureChangeFromJson(Map<String, dynamic> json) =>
+    _TemperatureChange(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$TemperatureChangeToJson(_TemperatureChange instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };

@@ -4,7 +4,7 @@ part 'history_params.freezed.dart';
 
 /// Parameters for a history request.
 @freezed
-class HistoryParams with _$HistoryParams {
+abstract class HistoryParams with _$HistoryParams {
   /// Creates a new [HistoryParams].
   ///
   /// [latitude] and [longitude] are the coordinates of the location.

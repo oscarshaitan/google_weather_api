@@ -6,7 +6,7 @@ part 'current_conditions.g.dart';
 
 /// The current weather conditions.
 @freezed
-class CurrentConditions with _$CurrentConditions {
+abstract class CurrentConditions with _$CurrentConditions {
   /// Creates a new [CurrentConditions].
   const factory CurrentConditions({
     /// The time that this data was measured.
@@ -71,7 +71,7 @@ class CurrentConditions with _$CurrentConditions {
 
 /// The history of the current weather conditions.
 @freezed
-class CurrentConditionsHistory with _$CurrentConditionsHistory {
+abstract class CurrentConditionsHistory with _$CurrentConditionsHistory {
   /// Creates a new [CurrentConditionsHistory].
   const factory CurrentConditionsHistory({
     /// The change in temperature over the last 24 hours.
@@ -94,7 +94,7 @@ class CurrentConditionsHistory with _$CurrentConditionsHistory {
 
 /// The change in temperature.
 @freezed
-class TemperatureChange with _$TemperatureChange {
+abstract class TemperatureChange with _$TemperatureChange {
   /// Creates a new [TemperatureChange].
   const factory TemperatureChange({
     /// The change in temperature, in degrees.

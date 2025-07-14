@@ -6,7 +6,7 @@ part 'hourly_forecast.g.dart';
 
 /// The hourly forecast.
 @freezed
-class HourlyForecast with _$HourlyForecast {
+abstract class HourlyForecast with _$HourlyForecast {
   /// Creates a new [HourlyForecast].
   const factory HourlyForecast({
     /// A list of hourly forecasts.
@@ -26,7 +26,7 @@ class HourlyForecast with _$HourlyForecast {
 
 /// The forecast for a single hour.
 @freezed
-class ForecastHour with _$ForecastHour {
+abstract class ForecastHour with _$ForecastHour {
   /// Creates a new [ForecastHour].
   const factory ForecastHour({
     /// The time interval that this forecast is for.

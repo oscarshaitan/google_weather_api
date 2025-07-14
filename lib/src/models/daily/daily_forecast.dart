@@ -6,7 +6,7 @@ part 'daily_forecast.g.dart';
 
 /// The daily forecast.
 @freezed
-class DailyForecast with _$DailyForecast {
+abstract class DailyForecast with _$DailyForecast {
   /// Creates a new [DailyForecast].
   const factory DailyForecast({
     /// A list of daily forecasts.
@@ -26,7 +26,7 @@ class DailyForecast with _$DailyForecast {
 
 /// A forecast for a single day.
 @freezed
-class ForecastDay with _$ForecastDay {
+abstract class ForecastDay with _$ForecastDay {
   /// Creates a new [ForecastDay].
   const factory ForecastDay({
     /// The time interval that this forecast is for.
@@ -73,7 +73,7 @@ class ForecastDay with _$ForecastDay {
 
 /// The display date.
 @freezed
-class DisplayDate with _$DisplayDate {
+abstract class DisplayDate with _$DisplayDate {
   /// Creates a new [DisplayDate].
   const factory DisplayDate({
     /// The year.
@@ -93,7 +93,7 @@ class DisplayDate with _$DisplayDate {
 
 /// The daytime forecast.
 @freezed
-class DaytimeForecast with _$DaytimeForecast {
+abstract class DaytimeForecast with _$DaytimeForecast {
   /// Creates a new [DaytimeForecast].
   const factory DaytimeForecast({
     /// The time interval that this forecast is for.
@@ -140,7 +140,7 @@ class DaytimeForecast with _$DaytimeForecast {
 
 /// The nighttime forecast.
 @freezed
-class NighttimeForecast with _$NighttimeForecast {
+abstract class NighttimeForecast with _$NighttimeForecast {
   /// Creates a new [NighttimeForecast].
   const factory NighttimeForecast({
     /// The time interval that this forecast is for.
@@ -175,7 +175,7 @@ class NighttimeForecast with _$NighttimeForecast {
 
 /// The feels-like maximum temperature.
 @freezed
-class FeelsLikeMaxTemperature with _$FeelsLikeMaxTemperature {
+abstract class FeelsLikeMaxTemperature with _$FeelsLikeMaxTemperature {
   /// Creates a new [FeelsLikeMaxTemperature].
   const factory FeelsLikeMaxTemperature({
     /// The temperature in degrees.
@@ -192,7 +192,7 @@ class FeelsLikeMaxTemperature with _$FeelsLikeMaxTemperature {
 
 /// The feels-like minimum temperature.
 @freezed
-class FeelsLikeMinTemperature with _$FeelsLikeMinTemperature {
+abstract class FeelsLikeMinTemperature with _$FeelsLikeMinTemperature {
   /// Creates a new [FeelsLikeMinTemperature].
   const factory FeelsLikeMinTemperature({
     /// The temperature in degrees.
@@ -209,7 +209,7 @@ class FeelsLikeMinTemperature with _$FeelsLikeMinTemperature {
 
 /// The sun events for a day.
 @freezed
-class SunEvents with _$SunEvents {
+abstract class SunEvents with _$SunEvents {
   /// Creates a new [SunEvents].
   const factory SunEvents({
     /// The time of sunrise.
@@ -226,7 +226,7 @@ class SunEvents with _$SunEvents {
 
 /// The moon events for a day.
 @freezed
-class MoonEvents with _$MoonEvents {
+abstract class MoonEvents with _$MoonEvents {
   /// Creates a new [MoonEvents].
   const factory MoonEvents({
     /// The phase of the moon.
@@ -246,7 +246,7 @@ class MoonEvents with _$MoonEvents {
 
 /// The maximum heat index.
 @freezed
-class MaxHeatIndex with _$MaxHeatIndex {
+abstract class MaxHeatIndex with _$MaxHeatIndex {
   /// Creates a new [MaxHeatIndex].
   const factory MaxHeatIndex({
     /// The temperature in degrees.
@@ -263,7 +263,7 @@ class MaxHeatIndex with _$MaxHeatIndex {
 
 /// The sea-level pressure.
 @freezed
-class SeaLevelPressure with _$SeaLevelPressure {
+abstract class SeaLevelPressure with _$SeaLevelPressure {
   /// Creates a new [SeaLevelPressure].
   const factory SeaLevelPressure({
     /// The pressure value.

@@ -4,7 +4,7 @@ part 'forecast_params.freezed.dart';
 
 /// Parameters for a forecast request.
 @freezed
-class ForecastParams with _$ForecastParams {
+abstract class ForecastParams with _$ForecastParams {
   /// Creates a new [ForecastParams].
   ///
   /// [latitude] and [longitude] are the coordinates of the location.

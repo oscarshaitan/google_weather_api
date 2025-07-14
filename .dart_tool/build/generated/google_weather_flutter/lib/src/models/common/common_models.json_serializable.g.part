@@ -1,0 +1,267 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) => _TimeZone(
+      id: json['id'] as String,
+    );
+
+Map<String, dynamic> _$TimeZoneToJson(_TimeZone instance) => <String, dynamic>{
+      'id': instance.id,
+    };
+
+_WeatherCondition _$WeatherConditionFromJson(Map<String, dynamic> json) =>
+    _WeatherCondition(
+      iconBaseUri: json['iconBaseUri'] as String,
+      description:
+          Description.fromJson(json['description'] as Map<String, dynamic>),
+      type: json['type'] as String,
+    );
+
+Map<String, dynamic> _$WeatherConditionToJson(_WeatherCondition instance) =>
+    <String, dynamic>{
+      'iconBaseUri': instance.iconBaseUri,
+      'description': instance.description,
+      'type': instance.type,
+    };
+
+_Description _$DescriptionFromJson(Map<String, dynamic> json) => _Description(
+      text: json['text'] as String,
+      languageCode: json['languageCode'] as String,
+    );
+
+Map<String, dynamic> _$DescriptionToJson(_Description instance) =>
+    <String, dynamic>{
+      'text': instance.text,
+      'languageCode': instance.languageCode,
+    };
+
+_Temperature _$TemperatureFromJson(Map<String, dynamic> json) => _Temperature(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$TemperatureToJson(_Temperature instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_FeelsLikeTemperature _$FeelsLikeTemperatureFromJson(
+        Map<String, dynamic> json) =>
+    _FeelsLikeTemperature(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$FeelsLikeTemperatureToJson(
+        _FeelsLikeTemperature instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_DewPoint _$DewPointFromJson(Map<String, dynamic> json) => _DewPoint(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$DewPointToJson(_DewPoint instance) => <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_HeatIndex _$HeatIndexFromJson(Map<String, dynamic> json) => _HeatIndex(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$HeatIndexToJson(_HeatIndex instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_WindChill _$WindChillFromJson(Map<String, dynamic> json) => _WindChill(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$WindChillToJson(_WindChill instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_Precipitation _$PrecipitationFromJson(Map<String, dynamic> json) =>
+    _Precipitation(
+      probability:
+          Probability.fromJson(json['probability'] as Map<String, dynamic>),
+      qpf: Qpf.fromJson(json['qpf'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$PrecipitationToJson(_Precipitation instance) =>
+    <String, dynamic>{
+      'probability': instance.probability,
+      'qpf': instance.qpf,
+    };
+
+_Probability _$ProbabilityFromJson(Map<String, dynamic> json) => _Probability(
+      percent: (json['percent'] as num).toInt(),
+      type: json['type'] as String,
+    );
+
+Map<String, dynamic> _$ProbabilityToJson(_Probability instance) =>
+    <String, dynamic>{
+      'percent': instance.percent,
+      'type': instance.type,
+    };
+
+_Qpf _$QpfFromJson(Map<String, dynamic> json) => _Qpf(
+      quantity: (json['quantity'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$QpfToJson(_Qpf instance) => <String, dynamic>{
+      'quantity': instance.quantity,
+      'unit': instance.unit,
+    };
+
+_AirPressure _$AirPressureFromJson(Map<String, dynamic> json) => _AirPressure(
+      meanSeaLevelMillibars: (json['meanSeaLevelMillibars'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$AirPressureToJson(_AirPressure instance) =>
+    <String, dynamic>{
+      'meanSeaLevelMillibars': instance.meanSeaLevelMillibars,
+    };
+
+_Wind _$WindFromJson(Map<String, dynamic> json) => _Wind(
+      direction: Direction.fromJson(json['direction'] as Map<String, dynamic>),
+      speed: Speed.fromJson(json['speed'] as Map<String, dynamic>),
+      gust: Gust.fromJson(json['gust'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$WindToJson(_Wind instance) => <String, dynamic>{
+      'direction': instance.direction,
+      'speed': instance.speed,
+      'gust': instance.gust,
+    };
+
+_Direction _$DirectionFromJson(Map<String, dynamic> json) => _Direction(
+      degrees: (json['degrees'] as num).toInt(),
+      cardinal: json['cardinal'] as String,
+    );
+
+Map<String, dynamic> _$DirectionToJson(_Direction instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'cardinal': instance.cardinal,
+    };
+
+_Speed _$SpeedFromJson(Map<String, dynamic> json) => _Speed(
+      value: (json['value'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$SpeedToJson(_Speed instance) => <String, dynamic>{
+      'value': instance.value,
+      'unit': instance.unit,
+    };
+
+_Gust _$GustFromJson(Map<String, dynamic> json) => _Gust(
+      value: (json['value'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$GustToJson(_Gust instance) => <String, dynamic>{
+      'value': instance.value,
+      'unit': instance.unit,
+    };
+
+_Visibility _$VisibilityFromJson(Map<String, dynamic> json) => _Visibility(
+      distance: (json['distance'] as num).toInt(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$VisibilityToJson(_Visibility instance) =>
+    <String, dynamic>{
+      'distance': instance.distance,
+      'unit': instance.unit,
+    };
+
+_Interval _$IntervalFromJson(Map<String, dynamic> json) => _Interval(
+      startTime: DateTime.parse(json['startTime'] as String),
+      endTime: DateTime.parse(json['endTime'] as String),
+    );
+
+Map<String, dynamic> _$IntervalToJson(_Interval instance) => <String, dynamic>{
+      'startTime': instance.startTime.toIso8601String(),
+      'endTime': instance.endTime.toIso8601String(),
+    };
+
+_IceThickness _$IceThicknessFromJson(Map<String, dynamic> json) =>
+    _IceThickness(
+      thickness: (json['thickness'] as num).toInt(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$IceThicknessToJson(_IceThickness instance) =>
+    <String, dynamic>{
+      'thickness': instance.thickness,
+      'unit': instance.unit,
+    };
+
+_MaxTemperature _$MaxTemperatureFromJson(Map<String, dynamic> json) =>
+    _MaxTemperature(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$MaxTemperatureToJson(_MaxTemperature instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_MinTemperature _$MinTemperatureFromJson(Map<String, dynamic> json) =>
+    _MinTemperature(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$MinTemperatureToJson(_MinTemperature instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
+
+_DisplayDateTime _$DisplayDateTimeFromJson(Map<String, dynamic> json) =>
+    _DisplayDateTime(
+      year: (json['year'] as num).toInt(),
+      month: (json['month'] as num).toInt(),
+      day: (json['day'] as num).toInt(),
+      hours: (json['hours'] as num).toInt(),
+      utcOffset: json['utcOffset'] as String,
+    );
+
+Map<String, dynamic> _$DisplayDateTimeToJson(_DisplayDateTime instance) =>
+    <String, dynamic>{
+      'year': instance.year,
+      'month': instance.month,
+      'day': instance.day,
+      'hours': instance.hours,
+      'utcOffset': instance.utcOffset,
+    };
+
+_WetBulbTemperature _$WetBulbTemperatureFromJson(Map<String, dynamic> json) =>
+    _WetBulbTemperature(
+      degrees: (json['degrees'] as num).toDouble(),
+      unit: json['unit'] as String,
+    );
+
+Map<String, dynamic> _$WetBulbTemperatureToJson(_WetBulbTemperature instance) =>
+    <String, dynamic>{
+      'degrees': instance.degrees,
+      'unit': instance.unit,
+    };
