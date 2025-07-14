@@ -2,9 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:dio/dio.dart';
-import 'package:weather_plugin/src/models/params/forecast_params.dart';
-import 'package:weather_plugin/src/models/params/history_params.dart';
-import 'package:weather_plugin/src/services/weather_service.dart';
+import 'package:google_weather_flutter/src/models/params/forecast_params.dart';
+import 'package:google_weather_flutter/src/models/params/history_params.dart';
+import 'package:google_weather_flutter/src/services/weather_service.dart';
 
 import 'weather_service_test.mocks.dart';
 
