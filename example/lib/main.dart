@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_plugin/google_weather_flutter.dart';
+import 'package:google_weather_flutter/google_weather_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(),
     );
   }
@@ -37,7 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _getCurrentConditions() {
     setState(() {
-      _currentConditions = _weatherService.getCurrentConditions(37.7749, -122.4194);
+      _currentConditions = _weatherService.getCurrentConditions(
+        37.7749,
+        -122.4194,
+      );
     });
   }
 
@@ -57,11 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _getHourlyForecast() {
     setState(() {
       _hourlyForecast = _weatherService.getHourlyForecast(
-        const ForecastParams(
-          latitude: 37.7749,
-          longitude: -122.4194,
-          days: 3,
-        ),
+        const ForecastParams(latitude: 37.7749, longitude: -122.4194, days: 3),
       );
     });
   }
@@ -69,11 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _getHourlyHistory() {
     setState(() {
       _hourlyHistory = _weatherService.getHourlyHistory(
-        const HistoryParams(
-          latitude: 37.7749,
-          longitude: -122.4194,
-          hours: 3,
-        ),
+        const HistoryParams(latitude: 37.7749, longitude: -122.4194, hours: 3),
       );
     });
   }
@@ -90,9 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Weather Plugin Demo'),
-      ),
+      appBar: AppBar(title: const Text('Weather Plugin Demo')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -129,7 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (snapshot.hasData) {
                       final weather = snapshot.data!;
                       return Text(
-                          'Current Temperature: ${weather.temperature.degrees}°${weather.temperature.unit}');
+                        'Current Temperature: ${weather.temperature.degrees}°${weather.temperature.unit}',
+                      );
                     }
                     return Container();
                   },
@@ -147,7 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (snapshot.hasData) {
                       final forecast = snapshot.data!;
                       return Text(
-                          'Daily Forecast: ${forecast.forecastDays.length} days');
+                        'Daily Forecast: ${forecast.forecastDays.length} days',
+                      );
                     }
                     return Container();
                   },
@@ -165,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (snapshot.hasData) {
                       final forecast = snapshot.data!;
                       return Text(
-                          'Hourly Forecast: ${forecast.forecastHours.length} hours');
+                        'Hourly Forecast: ${forecast.forecastHours.length} hours',
+                      );
                     }
                     return Container();
                   },
@@ -183,7 +177,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     } else if (snapshot.hasData) {
                       final history = snapshot.data!;
                       return Text(
-                          'Hourly History: ${history.historyHours.length} hours');
+                        'Hourly History: ${history.historyHours.length} hours',
+                      );
                     }
                     return Container();
                   },

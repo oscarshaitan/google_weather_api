@@ -515,7 +515,7 @@
       "name": "google_weather_flutter",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.4"
     }
   ],
   "generator": "pub",

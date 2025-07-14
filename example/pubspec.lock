@@ -95,10 +95,17 @@ packages:
     dependency: transitive
     description:
       name: freezed_annotation
-      sha256: c2e2d632dd9b8a2b7751117abcfc2b4888ecfe181bd9fca7170d9ef02e595fe2
+      sha256: "7294967ff0a6d98638e7acb774aac3af2550777accd8149c90af5b014e6d44d8"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.4"
+    version: "3.1.0"
+  google_weather_flutter:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   http_parser:
     dependency: transitive
     description:
@@ -256,13 +263,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "15.0.0"
-  weather_plugin:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   web:
     dependency: transitive
     description:
@@ -272,5 +272,5 @@ packages:
     source: hosted
     version: "1.1.1"
 sdks:
-  dart: ">=3.8.0-278.1.beta <4.0.0"
-  flutter: ">=3.18.0-18.0.pre.54"
+  dart: ">=3.7.0-0 <4.0.0"
+  flutter: ">=3.29.0"

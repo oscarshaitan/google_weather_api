@@ -19,7 +19,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.8.0-278.1.beta
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,7 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  weather_plugin:
+  google_weather_flutter:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

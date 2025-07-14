@@ -69,7 +69,8 @@ void main() {
             statusCode: 200,
           ));
 
-      final result = await weatherService.getCurrentConditions(37.7749, -122.4194);
+      final result =
+          await weatherService.getCurrentConditions(37.7749, -122.4194);
 
       expect(result, isNotNull);
     });
@@ -90,7 +91,8 @@ void main() {
             statusCode: 200,
           ));
 
-      final result = await weatherService.getDailyForecast(const ForecastParams(latitude: 37.7749, longitude: -122.4194));
+      final result = await weatherService.getDailyForecast(
+          const ForecastParams(latitude: 37.7749, longitude: -122.4194));
 
       expect(result, isNotNull);
     });
@@ -111,7 +113,8 @@ void main() {
             statusCode: 200,
           ));
 
-      final result = await weatherService.getHourlyForecast(const ForecastParams(latitude: 37.7749, longitude: -122.4194));
+      final result = await weatherService.getHourlyForecast(
+          const ForecastParams(latitude: 37.7749, longitude: -122.4194));
 
       expect(result, isNotNull);
     });
@@ -132,7 +135,8 @@ void main() {
             statusCode: 200,
           ));
 
-      final result = await weatherService.getHourlyHistory(const HistoryParams(latitude: 37.7749, longitude: -122.4194));
+      final result = await weatherService.getHourlyHistory(
+          const HistoryParams(latitude: 37.7749, longitude: -122.4194));
 
       expect(result, isNotNull);
     });
